@@ -1,0 +1,8 @@
+第一步，运行gendataset.py，什么也不用改，会生成dataset/V2文件夹(V2是我设定的版本可以根据需要改），里面的是用来训练的文件
+（解释：	
+最后print的三个值分别是数据集的平均spacing，mask区域的平均size，以及mask区域的最大size，
+如果要修改的话，更改target_spacing与no_max_shape两个变量
+target_spacing是生成的数据集spacing大小，改的越大，数据像素数量越少
+no_max_shape是生成数据的最大三维尺寸，配合target_spacing去改，只要保证大于上面输出的“mask区域的最大size”就行
+
+第二步，运行train.py，什么也不用改
